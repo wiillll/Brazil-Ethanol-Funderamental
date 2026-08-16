@@ -6,7 +6,7 @@ MONTHS={'JAN':1,'FEV':2,'MAR':3,'ABR':4,'MAI':5,'JUN':6,'JUL':7,'AGO':8,'SET':9,
 BASE='https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos'
 URLS={
 'production':f'{BASE}/arquivos-producao-de-biocombustiveis/producao-etanol-anidro-hidratado-m3-2012-2026.csv/@@download/file',
-'sales':f'{BASE}/vdpb/vendas-derivados-petroleo-e-etanol/vendas-combustiveis-m3-1990-2026.csv/@@download/file',
+'sales':f'{BASE}/vdpb/vendas-derivados-petroleo-e-etanol/vendas-combustiveis-m3-1990-2025.csv/@@download/file',
 'trade':f'{BASE}/ie/etanol/importacoes-exportacoes-etanol-2012-2025.csv/@@download/file',
 'prices':f'{BASE}/shpc/dsas/ca/ca-2026-01.zip'}
 
