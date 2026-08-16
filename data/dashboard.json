@@ -1,8 +1,349 @@
 {
-  "generated_at": null,
-  "latest_production_month": null,
-  "monthly": [],
+  "generated_at": "2026-08-16T16:24:42.378107+00:00",
+  "latest_production_month": "2026-06",
+  "monthly": [
+    {
+      "month": "2025-01",
+      "anhydrous_m3": 369144.645,
+      "hydrous_production_m3": 602221.515,
+      "total_production_m3": 971366.16,
+      "hydrous_sales_m3": 1835715.865,
+      "gasoline_c_sales_m3": 3841733.109,
+      "imports_m3": 21289.815,
+      "exports_m3": 180307.743,
+      "net_exports_m3": 159017.928
+    },
+    {
+      "month": "2025-02",
+      "anhydrous_m3": 280964.437,
+      "hydrous_production_m3": 572146.472,
+      "total_production_m3": 853110.909,
+      "hydrous_sales_m3": 1713343.441,
+      "gasoline_c_sales_m3": 3412735.6,
+      "imports_m3": 43693.897,
+      "exports_m3": 39666.301,
+      "net_exports_m3": -4027.596
+    },
+    {
+      "month": "2025-03",
+      "anhydrous_m3": 267539.614,
+      "hydrous_production_m3": 815368.955,
+      "total_production_m3": 1082908.569,
+      "hydrous_sales_m3": 1779394.919,
+      "gasoline_c_sales_m3": 3700842.412,
+      "imports_m3": 76.066,
+      "exports_m3": 230522.995,
+      "net_exports_m3": 230446.929
+    },
+    {
+      "month": "2025-04",
+      "anhydrous_m3": 474171.048,
+      "hydrous_production_m3": 1520598.03,
+      "total_production_m3": 1994769.078,
+      "hydrous_sales_m3": 1828095.338,
+      "gasoline_c_sales_m3": 3813003.344,
+      "imports_m3": 42441.257,
+      "exports_m3": 75924.092,
+      "net_exports_m3": 33482.835
+    },
+    {
+      "month": "2025-05",
+      "anhydrous_m3": 1443175.879,
+      "hydrous_production_m3": 2492022.741,
+      "total_production_m3": 3935198.62,
+      "hydrous_sales_m3": 1777340.21,
+      "gasoline_c_sales_m3": 3810733.248,
+      "imports_m3": 42628.853,
+      "exports_m3": 79192.049,
+      "net_exports_m3": 36563.196
+    },
+    {
+      "month": "2025-06",
+      "anhydrous_m3": 1461630.075,
+      "hydrous_production_m3": 2352100.566,
+      "total_production_m3": 3813730.641,
+      "hydrous_sales_m3": 1653542.219,
+      "gasoline_c_sales_m3": 3706679.217,
+      "imports_m3": 8.993,
+      "exports_m3": 131700.608,
+      "net_exports_m3": 131691.615
+    },
+    {
+      "month": "2025-07",
+      "anhydrous_m3": 1789164.144,
+      "hydrous_production_m3": 2861587.5,
+      "total_production_m3": 4650751.644,
+      "hydrous_sales_m3": 1708685.905,
+      "gasoline_c_sales_m3": 3916883.267,
+      "imports_m3": 22028.569,
+      "exports_m3": 148773.339,
+      "net_exports_m3": 126744.77
+    },
+    {
+      "month": "2025-08",
+      "anhydrous_m3": 1880785.946,
+      "hydrous_production_m3": 2938927.259,
+      "total_production_m3": 4819713.205,
+      "hydrous_sales_m3": 1696943.42,
+      "gasoline_c_sales_m3": 3869714.615,
+      "imports_m3": 35077.822,
+      "exports_m3": 148760.809,
+      "net_exports_m3": 113682.987
+    },
+    {
+      "month": "2025-09",
+      "anhydrous_m3": 1803376.748,
+      "hydrous_production_m3": 3034633.085,
+      "total_production_m3": 4838009.833,
+      "hydrous_sales_m3": 1752385.604,
+      "gasoline_c_sales_m3": 3946697.927,
+      "imports_m3": 64098.433,
+      "exports_m3": 209220.152,
+      "net_exports_m3": 145121.719
+    },
+    {
+      "month": "2025-10",
+      "anhydrous_m3": 1643590.25,
+      "hydrous_production_m3": 2700923.33,
+      "total_production_m3": 4344513.58,
+      "hydrous_sales_m3": 1844931.992,
+      "gasoline_c_sales_m3": 4145225.442,
+      "imports_m3": 20.738,
+      "exports_m3": 93684.938,
+      "net_exports_m3": 93664.2
+    },
+    {
+      "month": "2025-11",
+      "anhydrous_m3": 1106145.57,
+      "hydrous_production_m3": 1836495.678,
+      "total_production_m3": 2942641.248,
+      "hydrous_sales_m3": 1686101.155,
+      "gasoline_c_sales_m3": 3850786.813,
+      "imports_m3": 37043.034,
+      "exports_m3": 63873.882,
+      "net_exports_m3": 26830.848
+    },
+    {
+      "month": "2025-12",
+      "anhydrous_m3": 688126.129,
+      "hydrous_production_m3": 1007650.537,
+      "total_production_m3": 1695776.666,
+      "hydrous_sales_m3": 1962222.342,
+      "gasoline_c_sales_m3": 4639249.557,
+      "imports_m3": 15023.192,
+      "exports_m3": 154009.46,
+      "net_exports_m3": 138986.268
+    },
+    {
+      "month": "2026-01",
+      "anhydrous_m3": 572127.246,
+      "hydrous_production_m3": 669303.347,
+      "total_production_m3": 1241430.593,
+      "hydrous_sales_m3": 1650990.051,
+      "gasoline_c_sales_m3": 3918219.832,
+      "imports_m3": 139905.672,
+      "exports_m3": 43275.049,
+      "net_exports_m3": -96630.623
+    },
+    {
+      "month": "2026-02",
+      "anhydrous_m3": 457380.088,
+      "hydrous_production_m3": 594577.25,
+      "total_production_m3": 1051957.338,
+      "hydrous_sales_m3": 1517005.102,
+      "gasoline_c_sales_m3": 3763892.298,
+      "imports_m3": 73356.844,
+      "exports_m3": 59733.775,
+      "net_exports_m3": -13623.069
+    },
+    {
+      "month": "2026-03",
+      "anhydrous_m3": 505635.95,
+      "hydrous_production_m3": 917113.691,
+      "total_production_m3": 1422749.641,
+      "hydrous_sales_m3": 1800016.028,
+      "gasoline_c_sales_m3": 4175202.666,
+      "imports_m3": 139242.051,
+      "exports_m3": 72838.488,
+      "net_exports_m3": -66403.563
+    },
+    {
+      "month": "2026-04",
+      "anhydrous_m3": 999445.902,
+      "hydrous_production_m3": 2427703.359,
+      "total_production_m3": 3427149.261,
+      "hydrous_sales_m3": 1841266.997,
+      "gasoline_c_sales_m3": 3940074.4,
+      "imports_m3": 12076.476,
+      "exports_m3": 85401.428,
+      "net_exports_m3": 73324.952
+    },
+    {
+      "month": "2026-05",
+      "anhydrous_m3": 1682975.224,
+      "hydrous_production_m3": 2794101.146,
+      "total_production_m3": 4477076.37,
+      "hydrous_sales_m3": 1799044.003,
+      "gasoline_c_sales_m3": 3855061.887,
+      "imports_m3": 5035.042,
+      "exports_m3": 15551.651,
+      "net_exports_m3": 10516.609
+    },
+    {
+      "month": "2026-06",
+      "anhydrous_m3": 1577734.822,
+      "hydrous_production_m3": 2437752.588,
+      "total_production_m3": 4015487.41,
+      "hydrous_sales_m3": 1830484.081,
+      "gasoline_c_sales_m3": 3873726.169,
+      "imports_m3": 5100.544,
+      "exports_m3": 67788.669,
+      "net_exports_m3": 62688.125
+    }
+  ],
   "prices": [],
-  "latest_state_production": [],
-  "corn_ethanol_share_2025": 0.25
+  "latest_state_production": [
+    {
+      "state": "SÃO PAULO",
+      "production_m3": 1303086.113,
+      "share": 0.32451505382755014
+    },
+    {
+      "state": "GOIAS",
+      "production_m3": 735981.639,
+      "share": 0.18328575434382946
+    },
+    {
+      "state": "MATO GROSSO",
+      "production_m3": 712376.122,
+      "share": 0.17740713623604662
+    },
+    {
+      "state": "MATO GROSSO DO SUL",
+      "production_m3": 513572.024,
+      "share": 0.127897804565648
+    },
+    {
+      "state": "MINAS GERAIS",
+      "production_m3": 384070.475,
+      "share": 0.09564728656439743
+    },
+    {
+      "state": "PARANÁ",
+      "production_m3": 120466.824,
+      "share": 0.030000548302055317
+    },
+    {
+      "state": "MARANHÃO",
+      "production_m3": 95094.993,
+      "share": 0.023682054826813667
+    },
+    {
+      "state": "BAHIA",
+      "production_m3": 83137.294,
+      "share": 0.020704160046164856
+    },
+    {
+      "state": "TOCANTINS",
+      "production_m3": 27644.039,
+      "share": 0.006884354544645428
+    },
+    {
+      "state": "RIO DE JANEIRO",
+      "production_m3": 18735.178,
+      "share": 0.004665729483634466
+    },
+    {
+      "state": "ESPÍRITO SANTO",
+      "production_m3": 17941.253,
+      "share": 0.004468013759754262
+    },
+    {
+      "state": "PIAUI",
+      "production_m3": 3186.58,
+      "share": 0.0007935724047009277
+    },
+    {
+      "state": "RIO GRANDE DO SUL",
+      "production_m3": 194.876,
+      "share": 4.853109475942798e-05
+    },
+    {
+      "state": "ACRE",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "ALAGOAS",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "AMAPA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "AMAZONAS",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "BRASILIA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "CEARÁ",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "PARÁ",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "PARAIBA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "PERNAMBUCO",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "RIO GRANDE DO NORTE",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "RONDÔNIA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "RORAIMA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "SANTA CATARINA",
+      "production_m3": 0.0,
+      "share": 0.0
+    },
+    {
+      "state": "SERGIPE",
+      "production_m3": 0.0,
+      "share": 0.0
+    }
+  ],
+  "corn_ethanol_share_2025": 0.25,
+  "sources": {
+    "production": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/arquivos-producao-de-biocombustiveis/producao-etanol-anidro-hidratado-m3-2012-2026.csv/@@download/file",
+    "sales": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/vdpb/vendas-derivados-petroleo-e-etanol/vendas-combustiveis-m3-1990-2025.csv/@@download/file",
+    "trade": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/ie/etanol/importacoes-exportacoes-etanol-2012-2025.csv/@@download/file",
+    "prices": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2026-01.zip"
+  }
 }
