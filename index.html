@@ -6,32 +6,49 @@
 <title>Brazil Fuel Ethanol Monitor</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
-:root{--bg:#0b1020;--panel:#121a2f;--line:#273454;--text:#eef3ff;--muted:#9ca9c5;--good:#39d98a;--warn:#ffcc66;--accent:#5aa7ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{max-width:1240px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}h1{font-size:30px;margin:6px 0}.sub{color:var(--muted);font-size:13px}.badge{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px}.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px}.card{padding:17px}.label{font-size:12px;color:var(--muted)}.value{font-size:27px;font-weight:750;margin:8px 0}.delta{font-size:12px;color:var(--muted)}.good{color:var(--good)}.warn{color:var(--warn)}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:14px}.panel{padding:18px;min-height:330px}.panel h2{font-size:15px;margin:0 0 4px}.panel p{font-size:12px;color:var(--muted);margin:0 0 18px}.signals{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.signal{padding:15px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:7px}.footer{margin-top:16px;color:var(--muted);font-size:11px;line-height:1.6}.footer a{color:#9cc8ff}canvas{max-height:260px}@media(max-width:900px){.kpis,.signals{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.kpis,.signals{grid-template-columns:1fr}.wrap{padding:16px}}
+:root{--bg:#0b1020;--panel:#121a2f;--line:#273454;--text:#eef3ff;--muted:#9ca9c5;--good:#39d98a;--warn:#ffcc66;--accent:#5aa7ff;--soft:#ff7f7f}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{max-width:1280px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}h1{font-size:30px;margin:6px 0}.sub{color:var(--muted);font-size:13px}.badge{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px}.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px}.card{padding:17px}.label{font-size:12px;color:var(--muted)}.value{font-size:25px;font-weight:750;margin:8px 0}.delta{font-size:12px;color:var(--muted)}.good{color:var(--good)}.warn{color:var(--warn)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.panel{padding:18px;min-height:330px}.panel h2{font-size:15px;margin:0 0 4px}.panel p{font-size:12px;color:var(--muted);margin:0 0 18px}.signals{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.signal{padding:15px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:7px}.footer{margin-top:16px;color:var(--muted);font-size:11px;line-height:1.6}.footer a{color:#9cc8ff}.empty{color:var(--muted);font-size:13px;padding:60px 0;text-align:center}canvas{max-height:260px}@media(max-width:1050px){.kpis{grid-template-columns:repeat(3,1fr)}}@media(max-width:800px){.grid{grid-template-columns:1fr}.signals{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.kpis,.signals{grid-template-columns:1fr}.wrap{padding:16px}}
 </style>
 </head>
 <body><main class="wrap">
-<div class="top"><div><div class="eyebrow">Brazil Biofuels · Research Dashboard</div><h1>Brazil Fuel Ethanol Monitor</h1><div class="sub">简化版 · 用于玉米 / 糖 / 乙醇基本面联动观察</div></div><div class="badge">Base year: 2025 · Sources: ANP / EPE</div></div>
+<div class="top"><div><div class="eyebrow">Brazil Biofuels · Research Dashboard</div><h1>Brazil Fuel Ethanol Monitor</h1><div class="sub">V2 · 月度供给、燃料需求、价格竞争力、贸易与地区结构</div></div><div class="badge" id="fresh">等待自动数据更新 · ANP / EPE</div></div>
 <section class="kpis">
-<div class="card"><div class="label">ANP ethanol production</div><div class="value">35.9 bn L</div><div class="delta warn">▼ 2.8% YoY</div></div>
-<div class="card"><div class="label">Anhydrous production</div><div class="value">↑</div><div class="delta good">+3.1% YoY · E30 support</div></div>
-<div class="card"><div class="label">Hydrous retail sales</div><div class="value">↓</div><div class="delta warn">−5.9% YoY</div></div>
-<div class="card"><div class="label">Corn ethanol share</div><div class="value">~25%</div><div class="delta good">9.4 bn L corn ethanol (EPE)</div></div>
-<div class="card"><div class="label">Gasoline mandate</div><div class="value">E30</div><div class="delta good">27% → 30% from Aug-2025</div></div>
+<div class="card"><div class="label">最新月乙醇产量</div><div class="value" id="k-prod">—</div><div class="delta" id="k-prod-d">ANP</div></div>
+<div class="card"><div class="label">无水乙醇占比</div><div class="value" id="k-anh">—</div><div class="delta">E30 直接相关</div></div>
+<div class="card"><div class="label">Hydrous / Gasoline C 销量比</div><div class="value" id="k-sales">—</div><div class="delta">终端燃料选择代理指标</div></div>
+<div class="card"><div class="label">乙醇 / 汽油零售价比</div><div class="value" id="k-parity">—</div><div class="delta" id="k-parity-d">参考线 70%</div></div>
+<div class="card"><div class="label">最新月净出口</div><div class="value" id="k-trade">—</div><div class="delta">出口 − 进口</div></div>
+<div class="card"><div class="label">玉米乙醇占比</div><div class="value">~25%</div><div class="delta good">2025 · EPE</div></div>
 </section>
 <section class="grid">
-<div class="panel"><h2>Corn ethanol penetration</h2><p>玉米在无水 / 含水乙醇中的产量占比（EPE BEN 2026）</p><canvas id="corn"></canvas></div>
-<div class="panel"><h2>2025 fundamental pulse</h2><p>把年度硬数据转换成投研方向信号；不是交易建议</p><canvas id="pulse"></canvas></div>
+<div class="panel"><h2>月度乙醇产量</h2><p>全国无水 + 含水乙醇，单位：百万立方米</p><canvas id="prodChart"></canvas><div class="empty" id="prodEmpty">合并到 main 后自动抓取 ANP 月度数据</div></div>
+<div class="panel"><h2>Hydrous vs Gasoline C 销量</h2><p>全国经销商销量，单位：百万立方米</p><canvas id="salesChart"></canvas><div class="empty" id="salesEmpty">等待 ANP 月度销量数据</div></div>
+<div class="panel"><h2>乙醇 / 汽油零售价比</h2><p>低于 70% 通常代表含水乙醇价格竞争力更强；仅作研究参考</p><canvas id="priceChart"></canvas><div class="empty" id="priceEmpty">价格数据按 ANP 独立更新时间显示</div></div>
+<div class="panel"><h2>乙醇进出口</h2><p>月度进口、出口与净出口，单位：千立方米</p><canvas id="tradeChart"></canvas><div class="empty" id="tradeEmpty">等待 ANP 月度贸易数据</div></div>
+<div class="panel"><h2>最新月产量地区结构</h2><p>按州统计全国乙醇产量占比，用于识别生产重心</p><canvas id="stateChart"></canvas><div class="empty" id="stateEmpty">等待州级生产数据</div></div>
+<div class="panel"><h2>研究框架</h2><p>把数据变化转换为农产品基本面问题</p><div class="signals" style="grid-template-columns:1fr 1fr;margin-top:22px"><div class="card signal"><div class="label">SUPPLY</div><div class="value" style="font-size:18px"><span class="dot"></span>产量趋势</div><div class="delta">判断甘蔗压榨与玉米乙醇是否共同推升供应</div></div><div class="card signal"><div class="label">FUEL DEMAND</div><div class="value" style="font-size:18px"><span class="dot"></span>Hydrous 竞争力</div><div class="delta">销量和价格比共同判断终端消费</div></div><div class="card signal"><div class="label">CORN</div><div class="value" style="font-size:18px"><span class="dot"></span>结构性需求</div><div class="delta">重点观察 MT / GO / MS 的乙醇扩张</div></div><div class="card signal"><div class="label">SUGAR</div><div class="value" style="font-size:18px"><span class="dot"></span>糖醇切换</div><div class="delta">后续加入糖价与 ethanol parity 联动</div></div></div></div>
 </section>
-<section class="signals">
-<div class="card signal"><div class="label">SUPPLY</div><div class="value" style="font-size:18px"><span class="dot" style="background:var(--warn)"></span>Mixed</div><div class="delta">总产量下降，但玉米乙醇继续扩张</div></div>
-<div class="card signal"><div class="label">ANHYDROUS</div><div class="value" style="font-size:18px"><span class="dot"></span>Supportive</div><div class="delta">E30 提升刚性掺混需求</div></div>
-<div class="card signal"><div class="label">HYDROUS</div><div class="value" style="font-size:18px"><span class="dot" style="background:var(--warn)"></span>Soft</div><div class="delta">2025 销量同比下降 5.9%</div></div>
-<div class="card signal"><div class="label">CORN DEMAND</div><div class="value" style="font-size:18px"><span class="dot"></span>Structural ↑</div><div class="delta">乙醇正在成为巴西玉米工业需求核心变量</div></div>
-</section>
-<div class="footer">口径提示：ANP 2025 年乙醇产量为 35.9bn L；EPE BEN 2026 的能源平衡口径给出 38.20bn L。两者统计边界不同，因此本版不把两个总量直接拼接。玉米乙醇结构数据采用 EPE；监管生产与销售信号采用 ANP。<br>Sources: <a href="https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-divulga-dados-consolidados-do-setor-regulado-em-2025">ANP 2025 consolidated data</a> · <a href="https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-o-relatorio-sintese-do-balanco-energetico-nacional-2026">EPE BEN 2026</a></div>
+<div class="footer">数据口径：月度运营数据采用 ANP；玉米乙醇结构采用 EPE。不同来源的年度总量不强行合并。自动更新程序仅重算公开数据，不修改研究结论。<br>Sources: <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-biocombustiveis">ANP Production</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis">ANP Sales</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis">ANP Prices</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/importacoes-e-exportacoes">ANP Trade</a></div>
 </main>
 <script>
 Chart.defaults.color='#9ca9c5';Chart.defaults.borderColor='#273454';
-new Chart(document.getElementById('corn'),{type:'line',data:{labels:['2021','2022','2023','2024','2025'],datasets:[{label:'Anhydrous corn share %',data:[13.1,15.1,15.8,19.5,23.7],borderWidth:2,tension:.3},{label:'Hydrous corn share %',data:[7.8,11.4,15.7,20.2,26.6],borderWidth:2,tension:.3}]},options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,max:30,ticks:{callback:v=>v+'%'}}}}});
-new Chart(document.getElementById('pulse'),{type:'bar',data:{labels:['Total production','Anhydrous prod.','Hydrous sales'],datasets:[{label:'2025 YoY %',data:[-2.8,3.1,-5.9],borderWidth:0}]},options:{responsive:true,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{min:-7,max:5,ticks:{callback:v=>v+'%'}}}}});
+const fmt=v=>new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(v);
+const pct=v=>`${(v*100).toFixed(1)}%`;
+const hide=id=>document.getElementById(id).style.display='none';
+function chart(id,type,labels,datasets,options={}){return new Chart(document.getElementById(id),{type,data:{labels,datasets},options:{responsive:true,plugins:{legend:{position:'bottom'}},...options}})}
+fetch('./data/dashboard.json').then(r=>r.json()).then(d=>{
+ const m=d.monthly||[]; const latest=m[m.length-1];
+ if(d.generated_at) document.getElementById('fresh').textContent=`自动更新 · ${new Date(d.generated_at).toLocaleDateString('zh-CN')} · 最新生产月 ${d.latest_production_month||'—'}`;
+ if(latest){
+  document.getElementById('k-prod').textContent=`${fmt(latest.total_production_m3/1e6)}m m³`;
+  document.getElementById('k-anh').textContent=latest.total_production_m3?pct(latest.anhydrous_m3/latest.total_production_m3):'—';
+  document.getElementById('k-sales').textContent=latest.gasoline_c_sales_m3?pct(latest.hydrous_sales_m3/latest.gasoline_c_sales_m3):'—';
+  document.getElementById('k-trade').textContent=`${fmt(latest.net_exports_m3/1000)}k m³`;
+  const last12=m.slice(-12); hide('prodEmpty'); hide('salesEmpty'); hide('tradeEmpty');
+  chart('prodChart','bar',last12.map(x=>x.month),[{label:'Anhydrous',data:last12.map(x=>x.anhydrous_m3/1e6),stack:'p'},{label:'Hydrous',data:last12.map(x=>x.hydrous_production_m3/1e6),stack:'p'}],{scales:{x:{stacked:true},y:{stacked:true}}});
+  chart('salesChart','line',last12.map(x=>x.month),[{label:'Hydrous ethanol',data:last12.map(x=>x.hydrous_sales_m3/1e6),tension:.25},{label:'Gasoline C',data:last12.map(x=>x.gasoline_c_sales_m3/1e6),tension:.25}]);
+  chart('tradeChart','bar',last12.map(x=>x.month),[{label:'Exports',data:last12.map(x=>x.exports_m3/1000)},{label:'Imports',data:last12.map(x=>-x.imports_m3/1000)}]);
+ }
+ const p=d.prices||[]; if(p.length){const lp=p[p.length-1];document.getElementById('k-parity').textContent=pct(lp.parity);document.getElementById('k-parity-d').textContent=`${lp.month} · 参考线 70%`;hide('priceEmpty');chart('priceChart','line',p.map(x=>x.month),[{label:'Price parity',data:p.map(x=>x.parity*100),tension:.25},{label:'70% reference',data:p.map(()=>70),borderDash:[6,6],pointRadius:0}],{scales:{y:{ticks:{callback:v=>v+'%'}}}})}
+ const s=(d.latest_state_production||[]).slice(0,8); if(s.length){hide('stateEmpty');chart('stateChart','bar',s.map(x=>x.state),[{label:'Production share %',data:s.map(x=>x.share*100)}],{indexAxis:'y',scales:{x:{ticks:{callback:v=>v+'%'}}}})}
+}).catch(()=>{});
 </script></body></html>
