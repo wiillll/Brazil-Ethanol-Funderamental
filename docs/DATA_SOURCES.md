@@ -2,47 +2,47 @@
 
 ## Source hierarchy
 
-### ANP — operational / regulatory series
-Use ANP as the primary source for production, domestic fuel sales, prices, imports/exports and anhydrous inventory/contracting data.
+### ANP — operational / regulatory monthly series
+The main dashboard uses ANP as the primary source for monthly production, domestic fuel sales, retail fuel prices, imports and exports.
 
-- 2025 consolidated sector data: https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-divulga-dados-consolidados-do-setor-regulado-em-2025
-- Fuel sales open data: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis
+- Production: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-biocombustiveis
+- Fuel sales: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis
+- Retail prices: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis
 - Ethanol imports/exports: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/importacoes-e-exportacoes
-- Ethanol commercialisation / crop-year inventory: https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/comercializacao-de-etanol
 
-2025 anchor values used in dashboard v1:
-- Ethanol production: 35.9 billion litres, -2.8% YoY.
-- Anhydrous ethanol production: +3.1% YoY.
-- Hydrous ethanol sales: -5.9% YoY.
-- Mandatory anhydrous blend in gasoline C: 27% -> 30% from August 2025.
+Dashboard v2.2 keeps the last five calendar years from the available ANP files. As of the 2026-08-17 refresh, the generated file contains monthly data from 2022-01 to the latest ANP production month and price parity from 2022-07 onward. Price parity is calculated as the national simple average retail price of ETANOL divided by GASOLINA from ANP station observations.
 
-### EPE — energy balance / structural feedstock series
-Use EPE for the structural split of ethanol feedstocks and longer-run energy-balance analysis.
-
-- BEN 2026 summary: https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-o-relatorio-sintese-do-balanco-energetico-nacional-2026
-- BEN 2026 book: https://dashboard.epe.gov.br/apps/livro-ben/livro/pt/capitulo_1.html
-
-Corn share in ethanol production used in dashboard v1:
-
-| Year | Anhydrous | Hydrous |
-|---|---:|---:|
-| 2021 | 13.1% | 7.8% |
-| 2022 | 15.1% | 11.4% |
-| 2023 | 15.8% | 15.7% |
-| 2024 | 19.5% | 20.2% |
-| 2025 | 23.7% | 26.6% |
-
-EPE reports roughly 9.4 billion litres of corn ethanol in 2025 and about 25% of total ethanol output.
-
-## Important reconciliation note
-ANP reports 35.9 billion litres of ethanol production for 2025, while EPE BEN 2026 reports 38.20 million m3 under its energy-balance methodology. These totals should **not** be merged without reconciling statistical boundaries and definitions. Dashboard v1 deliberately keeps ANP operational totals and EPE feedstock-structure indicators separate.
-
-## Planned v2 derived metrics
+Key derived metrics:
 
 1. `ethanol_total = anhydrous + hydrous`
-2. `hydrous_gasoline_parity = hydrous_retail_price / gasoline_c_retail_price`
+2. `hydrous_gasoline_parity = ethanol_retail_price / gasoline_retail_price`
 3. `hydrous_share_otto = hydrous_sales / (hydrous_sales + gasoline_c_sales)`
-4. `corn_ethanol_share = corn_ethanol / total_ethanol`
-5. Monthly YoY and rolling-12-month growth for production and sales.
-6. Ethanol net exports.
-7. Regional corn-ethanol exposure for MT / GO / MS.
+4. Monthly YoY and rolling-12-month growth for production.
+5. Ethanol net exports = exports - imports.
+
+### UNEM / Imea / Conab — structural corn ethanol series
+The new `capacity.html` page uses UNEM Dados Setoriais images and manually structured chart values for corn ethanol capacity, production, corn grinding and DDG/DDGS.
+
+- UNEM Dados Setoriais: https://etanoldemilho.com.br/dados-setoriais/
+
+Current UNEM expansion snapshot shown on the source page:
+
+| Category | Count |
+|---|---:|
+| Biorrefineries in operation | 29 |
+| Biorrefineries with ANP construction authorization | 13 |
+| Projected / scheduled biorrefineries | 14 |
+
+Selected UNEM structural values:
+
+| Crop year | Corn ethanol production, million m3 | Corn grinding, million tons | DDG/DDGS, million tons |
+|---|---:|---:|---:|
+| 2023/24 | 6.30 | 14.06 | 3.11 |
+| 2024/25 | 8.24 | 18.38 | 4.11 |
+| 2025/26E | 9.97 | 22.20 | 4.83 |
+| 2033/34 projection | 16.63 | n/a | n/a |
+
+Important: UNEM crop-year structural data and ANP monthly operational data have different boundaries. They should not be merged without reconciling crop year/calendar year, reporting scope and methodology.
+
+## Reconciliation note
+ANP, EPE and UNEM/Imea may report different totals because they answer different questions. ANP is used for operational monthly monitoring; EPE is useful for energy-balance feedstock structure; UNEM/Imea/Conab is useful for corn ethanol capacity and crop-year structural expansion. The dashboard deliberately separates these views.

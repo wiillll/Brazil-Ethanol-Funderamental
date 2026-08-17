@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Brazil Corn Ethanol Capacity</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1020;--panel:#121a2f;--panel2:#16213a;--line:#273454;--text:#eef3ff;--muted:#9ca9c5;--good:#39d98a;--warn:#ffcc66;--accent:#5aa7ff;--soft:#ff7f7f;--corn:#f7c948;--brown:#c86b14}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#1b2a35 0,#0b1020 45%,#080c18 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{max-width:1320px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:20px}.eyebrow{color:var(--corn);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}h1{font-size:31px;margin:6px 0}.sub{color:var(--muted);font-size:13px;line-height:1.5}.nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}.nav a,.badge{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px;text-decoration:none}.nav a.active{color:var(--text);background:var(--panel2)}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card,.panel{background:rgba(18,26,47,.94);border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px rgba(0,0,0,.16)}.card{padding:17px}.label{font-size:12px;color:var(--muted)}.value{font-size:25px;font-weight:780;margin:8px 0}.delta{font-size:12px;color:var(--muted);line-height:1.45}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.panel{padding:18px;min-height:360px}.panel h2{font-size:15px;margin:0 0 4px}.panel p{font-size:12px;color:var(--muted);margin:0 0 18px;line-height:1.5}.chartbox{height:286px}.wide{grid-column:1/-1}.wide .chartbox{height:330px}.imggrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.source-img{width:100%;border-radius:14px;border:1px solid var(--line);background:#fff}.state-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.state-box{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:10px}.state-box b{font-size:18px;color:var(--corn)}.footer{margin-top:16px;color:var(--muted);font-size:11px;line-height:1.7}.footer a{color:#9cc8ff}canvas{width:100%!important;height:100%!important}@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}.grid,.imggrid{grid-template-columns:1fr}.wide{grid-column:auto}.state-list{grid-template-columns:1fr 1fr}.top{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start}}@media(max-width:540px){.kpis,.state-list{grid-template-columns:1fr}.wrap{padding:16px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="top"><div><div class="eyebrow">UNEM · Corn Ethanol Structural Page</div><h1>Brazil Corn Ethanol Capacity Monitor</h1><div class="sub">把玉米乙醇扩产、玉米消耗、乙醇产量和 DDG/DDGS 独立成页；这是结构性榨季数据，不与 ANP 月度运营口径混用。</div></div><div class="nav"><a href="./index.html">月度基本面</a><a class="active" href="./capacity.html">玉米乙醇产能</a><span class="badge" id="fresh">UNEM Dados Setoriais</span></div></div>
+<section class="kpis">
+<div class="card"><div class="label">在运玉米乙醇生物炼厂</div><div class="value" id="k-op">—</div><div class="delta" id="k-op-d">UNEM</div></div>
+<div class="card"><div class="label">获 ANP 建设许可</div><div class="value" id="k-auth">—</div><div class="delta">潜在新增产能</div></div>
+<div class="card"><div class="label">规划/计划建设</div><div class="value" id="k-proj">—</div><div class="delta">中长期扩张储备</div></div>
+<div class="card"><div class="label">2025/26E 玉米乙醇产量</div><div class="value" id="k-ethanol">—</div><div class="delta">UNEM/Imea 榨季估算</div></div>
+</section>
+<section class="grid">
+<div class="panel wide"><h2>玉米乙醇产量：含水 vs 无水</h2><p>单位：百万立方米；2033/34 为来源图给出的总量预测，未拆分含水/无水。</p><div class="chartbox"><canvas id="ethanolChart"></canvas></div></div>
+<div class="panel"><h2>玉米消耗：按州</h2><p>单位：百万吨；Mato Grosso 仍是核心，但 MS / Goiás / 其他州占比在上升。</p><div class="chartbox"><canvas id="cornChart"></canvas></div></div>
+<div class="panel"><h2>DDG/DDGS 产量：按州</h2><p>单位：百万吨；这是玉米乙醇扩张对饲料蛋白供应的直接映射。</p><div class="chartbox"><canvas id="ddgChart"></canvas></div></div>
+<div class="panel"><h2>炼厂扩张结构</h2><p>UNEM 当前页面显示：在运 29 座，获建设许可 13 座，规划/计划建设 14 座。</p><div class="chartbox"><canvas id="refineryChart"></canvas></div></div>
+<div class="panel"><h2>在运炼厂州分布</h2><p>当前在运项目高度集中于 Mato Grosso，其次 Goiás 和 Mato Grosso do Sul。</p><div class="state-list" id="stateList"></div></div>
+</section>
+<section class="imggrid" id="sourceImages"></section>
+<div class="footer">来源：<a href="https://etanoldemilho.com.br/dados-setoriais/">UNEM Dados Setoriais</a>，图表标注 Imea / Conab / UNEM。注意：UNEM 图表为榨季和结构性口径，ANP 主页面为月度运营数据，两者不能未经口径校准直接相加或替换。</div>
+</main>
+<script>
+Chart.defaults.color='#9ca9c5';Chart.defaults.borderColor='#273454';
+const el=id=>document.getElementById(id); const fmt=v=>new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(v);
+function chart(id,type,labels,datasets,options={}){return new Chart(el(id),{type,data:{labels,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}},interaction:{mode:'index',intersect:false},...options}})}
+const colors={mt:'#3fa34d',ms:'#c86b14',go:'#f7c948',others:'#fff000',hydrous:'#3fa34d',anhydrous:'#c86b14',proj:'#f7c948'};
+fetch('./data/dashboard.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ const c=d.corn_ethanol; const ref=c.refineries; const eth=c.ethanol_production; const corn=c.corn_grinding; const ddg=c.ddg_ddgs_production;
+ el('fresh').textContent=`UNEM · ${ref.as_of||'source page'}`; el('k-op').textContent=ref.operation.total; el('k-auth').textContent=ref.authorized_construction.total; el('k-proj').textContent=ref.projected.total;
+ const latestEth=eth.find(x=>x.crop_year.startsWith('2025/26')); el('k-ethanol').textContent=`${fmt(latestEth.total_million_m3)}m m³`; el('k-op-d').textContent=`MT ${ref.operation.states['Mato Grosso']} · GO ${ref.operation.states['Goiás']} · MS ${ref.operation.states['Mato Grosso do Sul']}`;
+ const labels=eth.map(x=>x.crop_year); chart('ethanolChart','bar',labels,[{label:'Hydrous',data:eth.map(x=>x.hydrous_million_m3),backgroundColor:colors.hydrous,stack:'e'},{label:'Anhydrous',data:eth.map(x=>x.anhydrous_million_m3),backgroundColor:colors.anhydrous,stack:'e'},{label:'Total / projection',data:eth.map(x=>x.crop_year.includes('projection')?x.total_million_m3:null),backgroundColor:colors.proj}],{scales:{x:{stacked:true,ticks:{maxRotation:60,minRotation:45}},y:{stacked:true,title:{display:true,text:'million m³'}}}});
+ const cLabels=corn.map(x=>x.crop_year); chart('cornChart','bar',cLabels,[{label:'Mato Grosso',data:corn.map(x=>x.mato_grosso_mt),backgroundColor:colors.mt,stack:'c'},{label:'Mato Grosso do Sul',data:corn.map(x=>x.mato_grosso_do_sul_mt),backgroundColor:colors.ms,stack:'c'},{label:'Goiás',data:corn.map(x=>x.goias_mt),backgroundColor:colors.go,stack:'c'},{label:'Others',data:corn.map(x=>x.others_mt),backgroundColor:colors.others,stack:'c'}],{scales:{x:{stacked:true,ticks:{maxRotation:60,minRotation:45}},y:{stacked:true,title:{display:true,text:'million tons'}}}});
+ const dLabels=ddg.map(x=>x.crop_year); chart('ddgChart','bar',dLabels,[{label:'Mato Grosso',data:ddg.map(x=>x.mato_grosso_mt),backgroundColor:colors.mt,stack:'d'},{label:'Mato Grosso do Sul',data:ddg.map(x=>x.mato_grosso_do_sul_mt),backgroundColor:colors.ms,stack:'d'},{label:'Goiás',data:ddg.map(x=>x.goias_mt),backgroundColor:colors.go,stack:'d'},{label:'Others',data:ddg.map(x=>x.others_mt),backgroundColor:colors.others,stack:'d'}],{scales:{x:{stacked:true,ticks:{maxRotation:60,minRotation:45}},y:{stacked:true,title:{display:true,text:'million tons'}}}});
+ chart('refineryChart','doughnut',['Operation','Authorized construction','Projected'],[{data:[ref.operation.total,ref.authorized_construction.total,ref.projected.total],backgroundColor:['#39d98a','#ffcc66','#5aa7ff']}]);
+ el('stateList').innerHTML=Object.entries(ref.operation.states).sort((a,b)=>b[1]-a[1]).map(([st,v])=>`<div class="state-box"><b>${v}</b><div>${st}</div></div>`).join('');
+ const imgs=c.images; const items=[['炼厂布局 / 扩产结构',imgs.refineries],['玉米种植面积与产量',imgs.corn_area],['玉米消耗',imgs.corn_grinding],['玉米乙醇产量',imgs.ethanol_output],['DDG/DDGS 产量',imgs.ddg_output]];
+ el('sourceImages').innerHTML=items.map(([title,url])=>`<div class="panel"><h2>${title}</h2><p>官网原图备查；上方图表为从该组图片手工结构化后的研究版本。</p><a href="${url}" target="_blank" rel="noopener"><img class="source-img" src="${url}" alt="${title}"></a></div>`).join('');
+}).catch(err=>{el('fresh').textContent='数据加载失败'; console.error(err)});
+</script></body></html>
