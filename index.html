@@ -10,7 +10,7 @@
 </style>
 </head>
 <body><main class="wrap">
-<div class="top"><div><div class="eyebrow">Brazil Biofuels · Research Dashboard</div><h1>Brazil Fuel Ethanol Monitor</h1><div class="sub">V2.3 · 连续走势与季节性图左右排列 · 最近5年同期折线对比 · 零售价比 · 地区/贸易结构 · 玉米乙醇产能入口</div></div><div class="nav"><a class="active" href="./index.html">月度基本面</a><a href="./capacity.html">玉米乙醇产能</a><span class="badge" id="fresh">等待自动数据更新 · ANP / UNEM</span></div></div>
+<div class="top"><div><div class="eyebrow">Brazil Biofuels · Research Dashboard</div><h1>Brazil Fuel Ethanol Monitor</h1><div class="sub">V2.4 · ANP 全国月度/日历口径 · 连续走势与季节性图 · UNICA 中南部双周入口</div></div><div class="nav"><a class="active" href="./index.html">巴西燃料乙醇基本面</a><a href="./capacity.html">基本面 · 产能与项目</a><a href="./unica/index.html">UNICA 中南部双周</a><span class="badge" id="fresh">等待自动数据更新 · ANP / UNEM</span></div></div>
 <section class="kpis">
 <div class="card"><div class="label">最新月乙醇产量</div><div class="value" id="k-prod">—</div><div class="delta" id="k-prod-d">ANP</div></div>
 <div class="card"><div class="label">产量同比</div><div class="value" id="k-yoy">—</div><div class="delta" id="k-yoy-d">同月对比</div></div>
@@ -37,7 +37,7 @@
 <div class="card signal"><div class="label">TRADE</div><div class="value" style="font-size:18px" id="sig-trade">—</div><div class="delta" id="sig-trade-d">净出口方向</div></div>
 <div class="card signal"><div class="label">CORN ETHANOL</div><div class="value" style="font-size:18px" id="sig-corn"><span class="dot"></span>Capacity ↑</div><div class="delta" id="sig-corn-d">UNEM：29 座在运，13 座获建设许可</div></div>
 </section>
-<div class="footer">研究口径：月度运营数据采用 ANP；玉米乙醇结构和扩产数据采用 UNEM/Imea/Conab。季节性图均以自然月为横轴、年份为折线；未完整年份只显示已公布月份。同比用于同月比较，环比容易受榨季季节性影响；异常提示是研究筛选器，不是交易建议。<br>Sources: <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-biocombustiveis">ANP Production</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis">ANP Sales</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis">ANP Prices</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/importacoes-e-exportacoes">ANP Trade</a> · <a href="https://etanoldemilho.com.br/dados-setoriais/">UNEM Dados Setoriais</a></div>
+<div class="footer">研究口径：本页为 ANP 全国月度/日历口径；玉米乙醇结构和扩产数据采用 UNEM/Imea/Conab。季节性图均以自然月为横轴、年份为折线；未完整年份只显示已公布月份。同比用于同月比较，环比容易受榨季季节性影响；异常提示是研究筛选器，不是交易建议。<br>Sources: <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-biocombustiveis">ANP Production</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis">ANP Sales</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis">ANP Prices</a> · <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/importacoes-e-exportacoes">ANP Trade</a> · <a href="https://etanoldemilho.com.br/dados-setoriais/">UNEM Dados Setoriais</a></div>
 </main>
 <script>
 Chart.defaults.color='#9ca9c5';Chart.defaults.borderColor='#273454';
@@ -96,3 +96,4 @@ fetch('./data/dashboard.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Er
  if(!el('alerts').children.length)alertCard('MONITOR','当前核心指标没有触发大幅异常阈值','good');
 }).catch(err=>{alertCard('DATA ERROR','数据文件加载失败，请检查 GitHub Pages 是否完成部署','soft'); console.error(err)});
 </script></body></html>
+
