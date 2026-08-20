@@ -32,3 +32,8 @@ Connect monthly ANP open-data files and calculate:
 - State-level exposure (MT, GO, MS, SP)
 
 See `docs/DATA_SOURCES.md` for source definitions and caveats.
+
+## UNICA South-Central biweekly page
+
+This branch adds a static /unica/ page for UNICA South-Central Brazil biweekly ethanol data. It is kept separate from ANP national monthly/calendar data and from the corn-ethanol capacity/projects page.
+
