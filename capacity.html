@@ -10,7 +10,7 @@
 </style>
 </head>
 <body><main class="wrap">
-<div class="top"><div><div class="eyebrow">UNEM · Corn Ethanol Structural Page</div><h1>Brazil Corn Ethanol Capacity Monitor</h1><div class="sub">把玉米乙醇扩产、玉米消耗、乙醇产量和 DDG/DDGS 独立成页；这是结构性榨季数据，不与 ANP 月度运营口径混用。</div></div><div class="nav"><a href="./index.html">月度基本面</a><a class="active" href="./capacity.html">玉米乙醇产能</a><span class="badge" id="fresh">UNEM Dados Setoriais</span></div></div>
+<div class="top"><div><div class="eyebrow">UNEM · Corn Ethanol Structural Page</div><h1>Brazil Corn Ethanol Capacity Monitor</h1><div class="sub">把玉米乙醇扩产、玉米消耗、乙醇产量和 DDG/DDGS 独立成页；这是基本面下的玉米乙醇产能与项目页；结构性榨季数据不与 ANP 全国月度运营口径、UNICA 中南部双周口径混用。</div></div><div class="nav"><a href="./index.html">巴西燃料乙醇基本面</a><a class="active" href="./capacity.html">基本面 · 产能与项目</a><a href="./unica/index.html">UNICA 中南部双周</a><span class="badge" id="fresh">UNEM Dados Setoriais</span></div></div>
 <section class="kpis">
 <div class="card"><div class="label">在运玉米乙醇生物炼厂</div><div class="value" id="k-op">—</div><div class="delta" id="k-op-d">UNEM</div></div>
 <div class="card"><div class="label">获 ANP 建设许可</div><div class="value" id="k-auth">—</div><div class="delta">潜在新增产能</div></div>
@@ -45,3 +45,4 @@ fetch('./data/dashboard.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  el('sourceImages').innerHTML=items.map(([title,url])=>`<div class="panel"><h2>${title}</h2><p>官网原图备查；上方图表为从该组图片手工结构化后的研究版本。</p><a href="${url}" target="_blank" rel="noopener"><img class="source-img" src="${url}" alt="${title}"></a></div>`).join('');
 }).catch(err=>{el('fresh').textContent='数据加载失败'; console.error(err)});
 </script></body></html>
+
