@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T14:46:47.959114+00:00",
+  "generated_at": "2026-09-02T08:04:40.168477+00:00",
   "history_start_year": 2022,
   "latest_production_month": "2026-07",
   "monthly": [
@@ -580,7 +580,7 @@
       "anhydrous_m3": 1682975.224,
       "hydrous_production_m3": 2794101.146,
       "total_production_m3": 4477076.37,
-      "hydrous_sales_m3": 1799044.003,
+      "hydrous_sales_m3": 1799043.964,
       "gasoline_c_sales_m3": 3855061.887,
       "imports_m3": 5035.042,
       "exports_m3": 15551.651,
@@ -591,8 +591,8 @@
       "anhydrous_m3": 1581448.648,
       "hydrous_production_m3": 2442848.977,
       "total_production_m3": 4024297.625,
-      "hydrous_sales_m3": 1830484.081,
-      "gasoline_c_sales_m3": 3873726.169,
+      "hydrous_sales_m3": 1831439.047,
+      "gasoline_c_sales_m3": 3876406.469,
       "imports_m3": 5100.544,
       "exports_m3": 67788.669,
       "net_exports_m3": 62688.125
@@ -602,11 +602,11 @@
       "anhydrous_m3": 1940749.892,
       "hydrous_production_m3": 3172802.372,
       "total_production_m3": 5113552.264,
-      "hydrous_sales_m3": 0.0,
-      "gasoline_c_sales_m3": 0.0,
-      "imports_m3": 0.0,
-      "exports_m3": 0.0,
-      "net_exports_m3": 0.0
+      "hydrous_sales_m3": 1919315.052,
+      "gasoline_c_sales_m3": 4002461.748,
+      "imports_m3": 3885.43,
+      "exports_m3": 176480.071,
+      "net_exports_m3": 172594.641
     }
   ],
   "prices": [
