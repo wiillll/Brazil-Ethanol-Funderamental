@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-02T08:04:40.168477+00:00",
+  "generated_at": "2026-10-02T09:59:14.585530+00:00",
   "history_start_year": 2022,
-  "latest_production_month": "2026-07",
+  "latest_production_month": "2026-08",
   "monthly": [
     {
       "month": "2022-01",
@@ -603,10 +603,21 @@
       "hydrous_production_m3": 3172802.372,
       "total_production_m3": 5113552.264,
       "hydrous_sales_m3": 1919315.052,
-      "gasoline_c_sales_m3": 4002461.748,
+      "gasoline_c_sales_m3": 4002511.748,
       "imports_m3": 3885.43,
       "exports_m3": 176480.071,
       "net_exports_m3": 172594.641
+    },
+    {
+      "month": "2026-08",
+      "anhydrous_m3": 1962599.98,
+      "hydrous_production_m3": 3287411.39,
+      "total_production_m3": 5250011.37,
+      "hydrous_sales_m3": 2055369.466,
+      "gasoline_c_sales_m3": 3886362.876,
+      "imports_m3": 32.976,
+      "exports_m3": 206242.807,
+      "net_exports_m3": 206209.831
     }
   ],
   "prices": [
@@ -998,78 +1009,103 @@
   "latest_state_production": [
     {
       "state": "SÃO PAULO",
-      "production_m3": 1845443.569,
-      "share": 0.360893
+      "production_m3": 1970982.57,
+      "share": 0.375424
     },
     {
       "state": "GOIAS",
-      "production_m3": 893180.83,
-      "share": 0.174669
+      "production_m3": 876467.724,
+      "share": 0.166946
     },
     {
       "state": "MATO GROSSO",
-      "production_m3": 765874.224,
-      "share": 0.149773
+      "production_m3": 744728.761,
+      "share": 0.141853
     },
     {
       "state": "MATO GROSSO DO SUL",
-      "production_m3": 639205.917,
-      "share": 0.125002
+      "production_m3": 625102.285,
+      "share": 0.119067
     },
     {
       "state": "MINAS GERAIS",
-      "production_m3": 493128.669,
-      "share": 0.096436
+      "production_m3": 482941.484,
+      "share": 0.091989
     },
     {
       "state": "PARANÁ",
-      "production_m3": 166306.788,
-      "share": 0.032523
+      "production_m3": 175813.037,
+      "share": 0.033488
     },
     {
       "state": "MARANHÃO",
-      "production_m3": 112285.584,
-      "share": 0.021958
+      "production_m3": 108423.614,
+      "share": 0.020652
     },
     {
       "state": "BAHIA",
-      "production_m3": 95010.654,
-      "share": 0.01858
-    },
-    {
-      "state": "TOCANTINS",
-      "production_m3": 30886.745,
-      "share": 0.00604
-    },
-    {
-      "state": "RIO DE JANEIRO",
-      "production_m3": 28012.518,
-      "share": 0.005478
-    },
-    {
-      "state": "ESPÍRITO SANTO",
-      "production_m3": 21958.966,
-      "share": 0.004294
-    },
-    {
-      "state": "PIAUI",
-      "production_m3": 10037.719,
-      "share": 0.001963
-    },
-    {
-      "state": "PARÁ",
-      "production_m3": 9258.115,
-      "share": 0.001811
+      "production_m3": 98541.079,
+      "share": 0.01877
     },
     {
       "state": "PARAIBA",
-      "production_m3": 2755.984,
-      "share": 0.000539
+      "production_m3": 46525.749,
+      "share": 0.008862
+    },
+    {
+      "state": "TOCANTINS",
+      "production_m3": 29795.179,
+      "share": 0.005675
+    },
+    {
+      "state": "RIO DE JANEIRO",
+      "production_m3": 21852.372,
+      "share": 0.004162
+    },
+    {
+      "state": "ESPÍRITO SANTO",
+      "production_m3": 21688.793,
+      "share": 0.004131
+    },
+    {
+      "state": "RIO GRANDE DO NORTE",
+      "production_m3": 12844.237,
+      "share": 0.002447
+    },
+    {
+      "state": "PIAUI",
+      "production_m3": 10425.472,
+      "share": 0.001986
+    },
+    {
+      "state": "PARÁ",
+      "production_m3": 8550.716,
+      "share": 0.001629
+    },
+    {
+      "state": "PERNAMBUCO",
+      "production_m3": 6321.286,
+      "share": 0.001204
+    },
+    {
+      "state": "ALAGOAS",
+      "production_m3": 4829.336,
+      "share": 0.00092
+    },
+    {
+      "state": "SERGIPE",
+      "production_m3": 3040.0,
+      "share": 0.000579
+    },
+    {
+      "state": "AMAZONAS",
+      "production_m3": 854.765,
+      "share": 0.000163
     },
     {
       "state": "RIO GRANDE DO SUL",
-      "production_m3": 205.982,
-      "share": 4e-05
+      "production_m3": 282.911,
+      "share": 5.4e-05
     }
   ],
   "corn_ethanol_share_2025": 0.25,
